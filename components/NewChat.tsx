@@ -11,20 +11,20 @@ import {
 } from "@tabler/icons-react";
 import BGCard from "./BGCard";
 
-import dalai_lama from "../public/chars/dalai_lama.png";
-import debate from "../public/chars/debate.png";
-import elon_musk from "../public/chars/elon_musk.png";
-import expert from "../public/chars/expert.png";
-import idea_generator from "../public/chars/idea_generator.png";
-import marcus_aurelius from "../public/chars/marcus_aurelius.png";
-import oprah from "../public/chars/oprah.png";
-import philosopher from "../public/chars/philosopher.png";
-import stephen_hawking from "../public/chars/stephen_hawking.png";
-import therapist from "../public/chars/therapist.png";
-import tolle from "../public/chars/tolle.png";
 import { useRouter } from "next/router";
 import { addChat, setChosenCharacter } from "@/stores/ChatActions";
 import { submitMessage } from "@/stores/SubmitMessage";
+// import dalai_lama from "../public/chars/dalai_lama.png";
+// import debate from "../public/chars/debate.png";
+// import elon_musk from "../public/chars/elon_musk.png";
+// import expert from "../public/chars/expert.png";
+// import idea_generator from "../public/chars/idea_generator.png";
+// import marcus_aurelius from "../public/chars/marcus_aurelius.png";
+// import oprah from "../public/chars/oprah.png";
+// import philosopher from "../public/chars/philosopher.png";
+// import stephen_hawking from "../public/chars/stephen_hawking.png";
+// import therapist from "../public/chars/therapist.png";
+// import tolle from "../public/chars/tolle.png";
 
 const scriptBase = ({
   character,
@@ -51,18 +51,18 @@ Hello
 const characters = {
   "Expert in Everything": {
     shortDescription: "Ask me anything!",
-    avatar: expert,
+    //avatar: expert,
     prompt: `I want you to act as a a world-leading expert in whatever I'm about to ask you.`,
   },
   Therapist: {
     shortDescription: "Techniques to change your beliefs",
     characterDescription:
       "World-class therapist with a specialization in Cognitive Behavioral Therapy",
-    avatar: therapist,
+    //avatar: therapist,
   },
   "Idea Generator": {
     shortDescription: "Brainstorming",
-    avatar: idea_generator,
+    //avatar: idea_generator,
     prompt: `  Rules:
 1. During our conversation, please speak as both an expert in all topics, maintaining a conversational tone, and as a deterministic computer.  Kindly adhere to my requests with precision.
 2. Stop where I ask you to stop
@@ -159,36 +159,36 @@ Ask me what my idea is.`,
   },
   Philosopher: {
     shortDescription: "Ethics, logic, and reasoning",
-    avatar: philosopher,
+    //avatar: philosopher,
     prompt: `I want you to act as a philosopher. I will provide some topics or questions related to the study of philosophy, and it will be your job to explore these concepts in depth. This could involve conducting research into various philosophical theories, proposing new ideas or finding creative solutions for solving complex problems. My first request is "I need help developing an ethical framework for decision making."`,
   },
   "Debate Champion": {
     shortDescription: "Articulate and quick-witted",
-    avatar: debate,
+    //avatar: debate,
   },
   Stoic: {
     shortDescription: "Acceptance, virtue, resilience",
-    avatar: marcus_aurelius,
+    //avatar: marcus_aurelius,
   },
   "Stephen Hawking": {
     shortDescription: "Renowned theoretical physicist",
-    avatar: stephen_hawking,
+    //avatar: stephen_hawking,
   },
   "Dalai Lama": {
     shortDescription: "Spiritual leader of Tibetan Buddhism",
-    avatar: dalai_lama,
+    //avatar: dalai_lama,
   },
   "Oprah Winfrey": {
     shortDescription: "Television host, actress and producer",
-    avatar: oprah,
+    //avatar: oprah,
   },
   "Eckhart Tolle": {
     shortDescription: "Spiritual teacher",
-    avatar: tolle,
+    //avatar: tolle,
   },
   "Elon Musk": {
     shortDescription: "Visionary entrepreneur",
-    avatar: elon_musk,
+    //avatar: elon_musk,
   },
 };
 
@@ -230,7 +230,7 @@ export default function NewChatCarousel() {
             <BGCard
               key={key}
               title={key}
-              image={character.avatar.src}
+              image=''
               description={character.shortDescription}
               onClick={(e) => {
                 setChosenCharacter(key);
